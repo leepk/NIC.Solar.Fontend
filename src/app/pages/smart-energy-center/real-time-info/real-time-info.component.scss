@@ -1,0 +1,14 @@
+.row-text {
+    display: flex;
+    justify-content: space-between;
+    /*border-bottom: gray 1px solid;*/
+    margin-top: 10px;
+
+    .value {
+        text-align: right;
+    }
+}
+.net-diagram-wraper {
+    display: flex;
+    justify-content: center;
+}

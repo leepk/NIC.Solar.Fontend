@@ -1,0 +1,280 @@
+﻿{
+	"TABS":{
+		"HOME":"Home",
+		"DEVICE":"Device",
+		"MY":"My account",
+		"WIFI":"WIFI Settings"
+	},
+	"LOGIN": {
+		"LANG": "English",
+		"TITLE": "Login",
+		"USERNAME": "User name",
+		"USERNAME_PLACEHOLDER": "User name, phone or email",
+		"PASSWORD": "Password",
+		"PASSWORD_PLACEHOLDER": "Please enter the password",
+		"AUTOLOGIN": "Save",
+		"FORGOTPASSWORD": "Forgot Password?",
+		"LOGIN_BTN": "Login",
+		"REGISTER": "No account?"
+	},
+	"DASHBOARD": {
+		"NEW_USER": "New User",
+		"PLANT": "Plant",
+		"STATISTICS": "Statistics",
+		"PULL_TEXT": "Pull down to refresh",
+		"REFRESHING_TEXT": "Updating...",
+		"CURRENT_RANKING": "Current Plant Ranking"
+	},
+	"CHANGEPASSWORD": {
+		"TITLE": "Password Change",
+		"OLDPASSWORD": "Old Password",
+		"OLDPASSWORD_PLACEHOLDER": "Please enter the old password",
+		"NEWPASSWORD": "New Password",
+		"NEWPASSWORD_PLACEHOLDER": "Please enter the new password",
+		"CONFIRMPASSWORD": "Confirm Password",
+		"CONFIRMPASSWORD_PLACEHOLDER": "Please enter the Confirm password",
+		"CONFIRM_BTN": "Confirm",
+		"ERROR_CHECK_PASSWORD": "Password and confirm password does not match!"
+	},
+	"NEWUSER": {
+		"TITLE": "New User",
+		"FULLNAME": "Full Name",
+		"FULLNAME_PLACEHOLDER": "Full Name",
+		"ROLE": "Role",
+		"ROLE_OPT_ADMIN": "Admin",
+		"ROLE_OPT_USER": "User",
+		"USERNAME": "User name",
+		"USERNAME_PLACEHOLDER": "Please enter a user name",
+		"PASSWORD": "Password",
+		"PASSWORD_PLACEHOLDER": "Please enter the password",
+		"PHONE": "Phone",
+		"PHONE_PLACEHOLDER": "Please enter the phone number",
+		"EMAIL": "Email",
+		"EMAIL_PLACEHOLDER": "Please enter the email",
+		"ADDRESS": "Address",
+		"ADDRESS_PLACEHOLDER": "Please enter address",
+		"CONFIRM_BTN": "Confirm"
+
+	},
+	"RESETPASSWORD": {
+		"TITLE": "Reset Password",
+		"EMAIL": "Email",
+		"EMAIL_PLACEHOLDER": "Please enter the email",
+		"VERTICODE": "Verification code",
+		"VERTICODE_PLACEHOLDER": "Please enter the verification code",
+		"VERTICODE_SEND_BTN": "Send Vertification Code",
+		"NEXT_BTN": "Next",
+		"PASSWORD": "Password",
+		"PASSWORD_PLACEHOLDER": "Please enter the password",
+		"CONFIRMPASSWORD": "Confirm Password",
+		"CONFIRMPASSWORD_PLACEHOLDER": "Please enter the Confirm password",
+		"CONFIRM_BTN": "Confrim"
+	},
+	"MY": {
+		"PASSWORDCHANGE": "Password Change",
+		"LOGOUT": "Logout"
+	},
+	"ENERGY_FLOW_COMP": {
+		"TITLE": "Energy flow",
+		"PV": "Pv",
+		"INVERTER": "Inverter",
+		"GRID": "Grid",
+		"HOME": "Home",
+		"BATTERY": "Battery"
+	},
+	"ENERGY_MANAGEMENT_COMP": {
+		"TITLE": "Energy Management",
+		"DAY": "Day",
+		"MONTH": "Month",
+		"YEAR": "Year",
+		"LIFETIME": "Lifetime",
+		"PRODUCTION": "Production"
+	},
+	"ENERGY_REVENUE_COMP": {
+		"TITLE": "Energy and Revenue Statistics",
+		"DAY": "day",
+		"MONTH": "Month",
+		"YEAR": "Year",
+		"LIFETIME": "Lifetime",
+		"PRODUCTION": "Production",
+		"ENERGY": "Energy",
+		"INCOME": "Income"
+	},
+	"ENVIRONMENTAL_CONTRIBUTION": {
+		"TITLE": "Environmental Contribution",
+		"COAL": "Standard coal savings",
+		"TREES": "tree(s)",
+		"TREE": "Equivalent Tree Planting"
+	},
+	"PLANT_COMP": {
+		"FULLNAME": "Full Name",
+		"MANUFACTURER": "Manufacturer",
+		"MANUFACTUREDATE": "ManufactureDate",
+		"CAPACITY": "Capacity",
+		"BATTERY_CAPACITY": "Battery Capacity"
+	},
+	"SLIDE_COMP": {
+		"DAILY_ENEGRY": "Daily energy",
+		"CURRENT_POWER": "Current Power",
+		"DAILY_REVENUE": "Daily Revenue",
+		"TOTAL": "Total",
+		"TOTAL_ENERGY": "Total Energy",
+		"TOTAL_NUMBER": "total number",
+		"OF_PLANT": "of plants",
+		"PLANT_STATUS": "Plant Status",
+		"NORMAL": "Normal",
+		"FAULTY": "Faulty",
+		"OFFLINE": "Offline",
+		"REALTIME_ALARM": "Real time Alarm",
+		"CRITICAL": "Critical",
+		"MARJOR": "Marjor",
+		"MINOR": "Minor",
+		"SUGGESTION": "Suggestion"
+	},
+	"ADD_DEVICE": {
+		"TITLE": "Add Device",
+		"COMFIRM_BTN": "Confirm",
+		"DEVICE_ID": "Device Id",
+		"DEVICE_PLACEHOLDER": "Please enter the device id",
+		"SN": "Serial Number",
+		"SN_PLACEHOLDER": "Please enter the serial number",
+		"DEVICE_NAME": "Device name",
+		"DEVICE_NAME_PLACEHOLDER": "Please enter the device name",
+		"MANUFACTURER": "Manufacturer",
+		"MANUFACTURER_PLACEHOLDER": "Please enter the manufacturer",
+		"MANUFACTURER_DATE": "Manufacturer date",
+		"MANUFACTURER_DATE_PLACEHOLDER": "Please enter the manufacturer date",
+		"SALE_DATE": "Sale date",
+		"SALE_DATE_PLACEHOLDER": "Please enter the sale date",
+		"ADDRESS": "Address",
+		"ADDRESS_PLACEHOLDER": "Please enter the address",
+		"PANT_TYPE": "Thông tin tấm pin",
+		"PANT_NUMBER": "Số lượng tấm pin",
+		"PANT_CAPACITY": "Công suất tấm pin",
+		"BATTERY_TYPE": "Thông tin pin",
+		"BATTERY_CAPACITY": "Công suất pin",
+		"LATITUDE": "Latitude",
+		"LONGITUDE": "Longitude",
+		"LATITUDE_PLACEHOLDER": "Ex: 14.058324",
+		"LONGITUDE_PLACEHOLDER": "Ex: 108.277199",
+		"EDIT_TITLE":"Change",
+		"ACTIVE":"Active",
+		"INACTIVE":"InActive",
+		"INVERTER_TYPE":"Inverter Type",
+		"INVERTER_CAPACITY":"Inverter Capacity"
+	},
+	"DETAILS_PLANT": {
+		"DAILY_ENERGY": "Daily energy",
+		"MONTHLY_ENERGY": "Monthly energy",
+		"ANNUAL_ENERGY": "Annual energy",
+		"LIFETIME_ENERGY": "Lifetime energy",
+		"REALTIME_INFO_TAB": "Real-time Info",
+		"PLANT_LAYOUT_TAB": "Plant Layout",
+		"DAILY_INCOMING": "Daily incoming",
+		"MONTHLY_INCOMING": "Monthly incoming",
+		"ANNUAL_INCOMING": "Annual incoming",
+		"LIFETIME_INCOMING": "Lifetime incoming",
+		"SAVING": "Saving",
+		"DEVICE_INFO": "Device info",
+		"PANT_TYPE": "Panel type",
+		"PANT_NUMBER": "Panel number",
+		"PANT_CAPACITY": "Panel capacity",
+		"BATTERY_TYPE": "Battery type",
+		"BATTERY_CAPACITY": "Battery capacity",
+		"WEATHER": "Weather",
+		"WIND": "Wind",
+		"TOMORROW": "tomorrow",
+		"AFTER_TOMORROW": "The day after tomorrow"
+	},
+	"DEVICE_LIST": {
+		"TITLE": "Device Filtering",
+		"DEVICE_TYPE": "Device type",
+		"ALL": "All",
+		"SMART_ENERGY_CENTER": "Smart Energy Center",
+		"RESET_BTN": "Reset",
+		"CONFIRM": "Confirm",
+		"DEVICE": "Device",
+		"SEARCH_PLACEHOLDER": "Search device",
+		"CURRENT_DEVICES": "There are currently {{value}} devices",
+		"ENERGY_REVENUE_STATISTICS": "Energy and Revenue Statistics",
+		"DEVICE_NAME": "Device name",
+		"CAPACITY": "Capacity",
+		"CURRENT_POWER": "Current Power",
+		"DAILY_ENERGY": "Daily energy",
+		"CONVERSION_EFFICIENCY": "Conversion efficiency",
+		"LIFETIME_ENERGY": "Lifetime energy",
+		"SOFTWARE_VERSION": "Software version"
+	},
+	"SMART_ENERGY_CENTER": {
+		"TITLE": "Smart Energy Center",
+		"REALTIME_INFO": "Real-time Info",
+		"DEVICE_INFO": "Device Info",
+		"ALARM_INFO": "Alarm Info",
+		"HISTORICAL_INFO": "Historical Info"
+	},
+	"ALARM_INFO_COMP": {
+		"ACTIVE_ALARM": "Active Alarm",
+		"HISTORY_ALARM": "History Alarm",
+		"OCCURRENCE_TIME": "Occurrence Time",
+		"CONFIRMATION_STATUS": "Confirmation status"
+	},
+	"DEVICE_INFO_COMP": {
+		"MANUFACTURER_NAME": "ManuFacturer name",
+		"DEVICE_NAME": "Device name",
+		"DEVICE_TYPE": "Device type",
+		"DEVICE_REP_HIS": "Device replacement history",
+		"DEVICE_ADDRESS": "Device address",
+		"SOFTWARE_VERSION": "Software version",
+		"GROUP_INFO": "Group info",
+		"Model": "Model"
+	},
+	"REALTIME_INFO_COMP": {
+		"NET_WORKING_DIAGRAM": "Networking Diagram",
+		"REALTIME_DATA": "Realtime Data",
+		"INVERTER_STATUS": "Inverter status",
+		"DAILY_ENEGRY": "Daily energy",
+		"LIFETIME_ENEGRY": "Liftime energy",
+		"OUTPUT_REACTIVE_POWER": "Output reactive power",
+		"TOTAL_INPUT_POWER": "Total input power",
+		"INVERTER_RATED_POWER": "Inverter rated power",
+		"POWER_FACTOR": "Power factor",
+		"GRID_FREQUENCY": "Grid frequency",
+		"DEVICE_INTERNAL_TEMP": "Device internal temperature",
+		"INVERTER_STARTUP_TIME": "Inverter startup time",
+		"INVERTER_SHUTDOWN_TIME": "Inverter shutdown time"
+	},
+	"MAP_USER": {
+		"TITLE": "MAP USER TO DEVICE",
+		"BTN_CONFIRM": "Confrim",
+		"BTN_CANCEL": "Cancel",
+		"USER_NAME_PLACEHOLDER": "User name",
+		"SEARCH_PLACEHOLDER": "Search",
+		"WARNING_MSG": "Map {{username}} to {{device}}"
+
+	},
+	"PLANT_DISTRIBUTION": {
+		"TITLE": "Plant Distribution",
+		"DEVICE_NAME": "Device name",
+		"DEVICE_FULLNAME": "Full name",
+		"DEVICE_ADDRESS": "Address"
+	},
+	"RESPONSE_MSG": {
+		"M00": "Success!"
+	},
+	"APP": {
+		"EXIT_MSG": "Tap again to exit."
+	},
+	"WIFI_SETTINGS":{
+		"SSID":"SSID (Wifi Name)",
+		"BSSID":"BSSID (Wifi MAC)",
+		"PASSWORD":"Password",
+		"COMFIRM":"Comfirm",
+		"STOP":"Stop",
+		"SSID_REQUIRED":"Please enter SSID",
+		"BSSID_REQUIRED":"Please enter BSSID",
+		"PASS_REQUIRED":"Please enter Password",
+		"GETSSID":"Get SSID",
+		"SUCCESS":"Success",
+		"FAIL":"Fail"
+	}
+}

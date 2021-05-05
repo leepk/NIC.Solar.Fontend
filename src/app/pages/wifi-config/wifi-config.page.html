@@ -1,0 +1,47 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title> 
+      {{ 'TABS.WIFI' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="upper-content">
+  <ion-item lines="none">
+    <mat-form-field class="full-width">
+      <mat-label>{{ 'WIFI_SETTINGS.SSID' | translate }}<b>*</b></mat-label>
+      <mat-icon matPrefix>assignment_ind</mat-icon>
+      <input [(ngModel)]="network.ssid" matInput placeholder="{{ 'WIFI_SETTINGS.SSID' | translate }}" type="text">      
+      <!--<mat-icon matSuffix>keyboard_arrow_right</mat-icon>-->
+    </mat-form-field>
+    <ion-button (click)="getCurrentSSID()">{{ 'WIFI_SETTINGS.GETSSID' | translate }}</ion-button>
+  </ion-item>
+  <ion-item lines="none">
+    <mat-form-field class="full-width">
+      <mat-label>{{ 'WIFI_SETTINGS.PASSWORD' | translate }}<b>*</b></mat-label>
+      <mat-icon matPrefix>lock_outline</mat-icon>
+      <input [(ngModel)]="network.password" matInput 
+           placeholder="{{ 'WIFI_SETTINGS.PASSWORD' | translate }}" [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+  </ion-item>
+  <ion-item lines="none" style="display: none;">
+    <mat-form-field class="full-width">
+      <mat-label>{{ 'WIFI_SETTINGS.BSSID' | translate }}</mat-label>
+      <mat-icon matPrefix>assignment_ind</mat-icon>
+      <input [(ngModel)]="network.bssid" matInput placeholder="{{ 'WIFI_SETTINGS.BSSID' | translate }}" type="text">
+      <!--<mat-icon matSuffix>keyboard_arrow_right</mat-icon>-->
+    </mat-form-field>
+  </ion-item>  
+</div>
+<div class="lower-content">
+  <ion-button *ngIf="!this.config" (click)="doConfig()">{{ 'WIFI_SETTINGS.COMFIRM' | translate }}</ion-button>
+  <ion-button *ngIf="this.config" color="danger" (click)="stopConfig()">{{ 'WIFI_SETTINGS.STOP' | translate }}</ion-button>
+</div>
+<div style="text-align: center;" class="lower-content">
+  <div [innerHTML]="statusMessage"></div>
+  <!-- <div [innerHTML]="lstwifi"></div> -->
+</div>
+</ion-content>

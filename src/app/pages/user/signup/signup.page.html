@@ -1,0 +1,68 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Signup</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-icon matPrefix>business_outline</mat-icon>
+				<input matInput placeholder="Company Name" type="text">
+			</mat-form-field>
+		</ion-item>
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-icon matPrefix>mail_outline</mat-icon>
+				<input matInput placeholder="Please enter the email address" type="text">
+			</mat-form-field>
+		</ion-item>
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-icon matPrefix>mail_outline</mat-icon>
+				<input matInput placeholder="Please enter the email again" type="text">
+			</mat-form-field>
+		</ion-item>
+
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-icon matPrefix>account_circle</mat-icon>
+				<input matInput placeholder="Please enter a user name" type="text">
+			</mat-form-field>
+		</ion-item>
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-icon matPrefix>lock_outline</mat-icon>
+				<input matInput placeholder="Please enter the password" [type]="hide ? 'password' : 'text'">
+				<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+			</mat-form-field>
+		</ion-item>
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-icon matPrefix>lock_outline</mat-icon>
+				<input matInput placeholder="Please confirm the password" [type]="hide2 ? 'password' : 'text'">
+				<mat-icon matSuffix (click)="hide2 = !hide2">{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+			</mat-form-field>
+		</ion-item>
+		<ion-item lines="none">
+			<mat-form-field class="verti-code">
+				<mat-icon matPrefix>local_police</mat-icon>
+				<input matInput placeholder="Please enter the veritication code" type="password">
+			</mat-form-field>
+		</ion-item>
+		
+		<ion-item lines="none">
+			<ion-checkbox></ion-checkbox>
+			<div class="term-policy">
+				I have read and agree to the <div>"Terms of Use"</div> and <div>Privacy Policy</div>
+			</div>
+		</ion-item>
+		<ion-button>Registration</ion-button>
+
+	</ion-list>
+</ion-content>

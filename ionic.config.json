@@ -1,0 +1,8 @@
+{
+  "name": "solar",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

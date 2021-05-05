@@ -1,0 +1,279 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{title}}</ion-title>
+		<ion-buttons slot="end" (click)="mapUserClick()" *ngIf="auth.isAdminRole()">
+			<ion-icon color="primary" slot="icon-only" name="person-add"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content *ngIf="currentTab == 'tab1'" class="tab1">
+	<!--<div class="sticky-segment" style="background-color: #fff">
+		<ion-segment scrollable [value]="currentTab" mode="md" (ionChange)="changeTabs($event)">
+			<ion-segment-button value="tab1">
+				<ion-label>Real-time Info</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="tab2">
+				<ion-label>Plant Layout</ion-label>
+			</ion-segment-button>
+		</ion-segment>
+	</div>-->
+	<!--<div class="panel">
+		<img src="assets/Background.png" />
+
+	</div>-->
+	<!--<mat-expansion-panel class="full-width"
+						 (opened)="cal()"
+						 (closed)="cal2()">
+		<mat-expansion-panel-header>
+			<mat-panel-description *ngIf="!isOpen">
+				{{ 'DETAILS_PLANT.WEATHER' | translate }}:{{weather?.current.temp | temperatureConverter:'C'}}&#8451; {{weather?.current.weather[0].description}}
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<div class="weather-info-wraper">
+			<div class="upper-weather-info">
+				<div>
+					<div class="des">{{weather?.current.weather[0].description}}</div>
+					<div>{{ 'DETAILS_PLANT.WIND' | translate }}: {{weather?.current.wind_speed}}m/s</div>
+				</div>
+				<div>
+					<div>{{weather?.current.temp | temperatureConverter:'C'}}&#8451;</div>
+					<div>{{weather?.current.humidity}}<ion-icon src="assets/icon/humidity.svg"></ion-icon></div>
+					<div>{{currentDate}}</div>
+				</div>
+			</div>
+			<ion-progress-bar value="1"></ion-progress-bar>
+			<div class="lower-weather-info">
+				<div class="wearther-info">
+					<div>{{ 'DETAILS_PLANT.TOMORROW' | translate }}</div>
+					<div class="des">{{weather?.daily[0].weather[0].description}}</div>
+					<div>{{weather?.daily[0].temp.min | temperatureConverter:'C'}}&#8451;-{{weather?.daily[0].temp.max | temperatureConverter:'C'}}&#8451;</div>
+				</div>
+				<div class="wearther-info">
+					<div>{{ 'DETAILS_PLANT.AFTER_TOMORROW' | translate }}</div>
+					<div class="des">{{weather?.daily[1].weather[0].description}}</div>
+					<div>{{weather?.daily[1].temp.min | temperatureConverter:'C'}}&#8451;-{{weather?.daily[1].temp.max | temperatureConverter:'C'}}&#8451;</div>
+				</div>
+			</div>
+		</div>
+	</mat-expansion-panel>-->
+	<div class="energy-info">
+		<div class="warp-row">
+			<div class="item">
+				<img src="./assets/icon/daily.png" />
+				<div>
+					<div class="energy">
+						{{rsOnFull?.incomingday}}kWh
+					</div>
+					<div class="e-des">
+						{{ 'DETAILS_PLANT.DAILY_ENERGY' | translate }}
+
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./assets/icon/monthly.png" />
+				<div>
+					<div class="energy">
+						{{rsOnFull?.incomingmonth}}kWh
+					</div>
+					<div class="e-des">
+						{{ 'DETAILS_PLANT.MONTHLY_ENERGY' | translate }}
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./assets/icon/annual.png" />
+				<div>
+					<div class="energy">
+						{{rsOnFull?.incomingyear}}kWh
+					</div>
+					<div class="e-des">
+						{{ 'DETAILS_PLANT.ANNUAL_ENERGY' | translate }}
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./assets/icon/lifetime.png" />
+				<div>
+					<div class="energy">
+						{{rsOnFull?.incominglifetime}}kWh
+					</div>
+					<div class="e-des">
+						{{ 'DETAILS_PLANT.LIFETIME_ENERGY' | translate }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="warp-row">
+
+		</div>-->
+		<!--<ion-grid>
+			<ion-row>
+				<ion-col>
+
+				</ion-col>
+				<ion-col>
+
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col>
+
+				</ion-col>
+				<ion-col>
+
+				</ion-col>
+			</ion-row>
+		</ion-grid>-->
+	</div>
+	<ion-card (click)="deviceList()">
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div class="tag">&nbsp;</div>
+			<ion-label class="title">
+				{{ 'ENERGY_FLOW_COMP.TITLE' | translate }}
+			</ion-label>
+			<!--<ion-icon slot="end" name="chevron-forward-outline"></ion-icon>-->
+		</ion-item>
+
+		<ion-card-content class="energy-flow" no-padding>
+			<app-energy-flow></app-energy-flow>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card (click)="deviceList()">
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div class="tag">&nbsp;</div>
+			<ion-label class="title">
+				{{ 'DETAILS_PLANT.SAVING' | translate }}
+			</ion-label>
+			<!--<ion-icon slot="end" name="chevron-forward-outline"></ion-icon>-->
+		</ion-item>
+
+		<ion-card-content class="energy-flow" no-padding>
+			<div class="energy-info">
+				<div class="warp-row">
+					<div class="item">
+						<img src="./assets/icon/moneydaily.png" />
+						<div>
+							<div class="energy">
+								{{rsOnFull?.moneyincomingday | currency:'VND':'symbol':undefined:'vi-VN'}}
+							</div>
+							<div class="e-des">
+								{{ 'DETAILS_PLANT.DAILY_INCOMING' | translate }}
+
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="./assets/icon/moneymonthly.png" />
+						<div>
+							<div class="energy">
+								{{rsOnFull?.moneyincomingmonth | currency:'VND':'symbol':undefined:'vi-VN'}}
+							</div>
+							<div class="e-des">
+								{{ 'DETAILS_PLANT.MONTHLY_INCOMING' | translate }}
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="./assets/icon/moneyannual.png" />
+						<div>
+							<div class="energy">
+								{{rsOnFull?.moneyincomingyear | currency:'VND':'symbol':undefined:'vi-VN'}}
+							</div>
+							<div class="e-des">
+								{{ 'DETAILS_PLANT.ANNUAL_INCOMING' | translate }}
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="./assets/icon/moneylifetime.png" />
+						<div>
+							<div class="energy">
+								{{rsOnFull?.moneyincominglifetime | currency:'VND':'symbol':undefined:'vi-VN'}}
+							</div>
+							<div class="e-des">
+								{{ 'DETAILS_PLANT.LIFETIME_INCOMING' | translate }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ion-card-content>
+	</ion-card>
+
+
+	<ion-card class="energy-management">
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div class="tag">&nbsp;</div>
+			<ion-label class="title">
+				{{ 'ENERGY_MANAGEMENT_COMP.TITLE' | translate }}
+			</ion-label>
+			<!--<ion-icon slot="end" name="chevron-forward-outline"></ion-icon>-->
+		</ion-item>
+
+		<app-energy-management></app-energy-management>
+	</ion-card>
+	<app-energy-revenue></app-energy-revenue>
+	<ion-card class="device-info">
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div class="tag">&nbsp;</div>
+			<ion-label class="title">
+				{{ 'DETAILS_PLANT.DEVICE_INFO' | translate }}
+			</ion-label>
+			<!--<ion-icon slot="end" name="chevron-forward-outline"></ion-icon>-->
+		</ion-item>
+
+		<ion-card-content no-padding>
+			<div class="warp-content" no-padding>
+				<div>
+					<ion-label class="full-width">
+						{{ 'DETAILS_PLANT.PANT_TYPE' | translate }}
+						: {{device?.pantType}}
+					</ion-label>
+					<ion-label class="full-width">
+						{{ 'DETAILS_PLANT.PANT_NUMBER' | translate }}
+						: {{device?.pantNumber}}
+					</ion-label>
+					<ion-label class="full-width">
+						{{ 'DETAILS_PLANT.PANT_CAPACITY' | translate }}
+						: {{device?.pantCapacity}}kWh
+					</ion-label>
+					<ion-label class="full-width">
+						{{ 'DETAILS_PLANT.BATTERY_TYPE' | translate }}
+						: {{device?.batteryType}}
+					</ion-label>
+					<ion-label class="full-width">
+						{{ 'DETAILS_PLANT.BATTERY_CAPACITY' | translate }}
+						: {{device?.batteryCapacity}}kWh
+					</ion-label>
+				</div>
+				<!--<ion-icon (click)="smartCenter()" name="chevron-forward-outline" slot="end"></ion-icon>-->
+			</div>
+		</ion-card-content>
+	</ion-card>
+	<!--<app-enviromental-contribution></app-enviromental-contribution>-->
+</ion-content>
+
+<ion-content *ngIf="currentTab == 'tab2'" class="tab2">
+	<div class="sticky-segment" style="background-color: #fff">
+		<ion-segment scrollable [value]="currentTab" mode="md" (ionChange)="changeTabs($event)">
+			<ion-segment-button value="tab1">
+				<ion-label>
+					{{ 'DETAILS_PLANT.REALTIME_INFO_TAB' | translate }}
+				</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="tab2">
+				<ion-label>
+					{{ 'DETAILS_PLANT.PLANT_LAYOUT_TAB' | translate }}
+				</ion-label>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+</ion-content>
+<ion-footer>
+	<app-link-japan-home-page></app-link-japan-home-page>	
+</ion-footer>

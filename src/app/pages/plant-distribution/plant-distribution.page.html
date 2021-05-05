@@ -1,0 +1,42 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'PLANT_DISTRIBUTION.TITLE' | translate }}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<google-map apiKey="AIzaSyAl-osqPjGqwg-ASAKszr0T_dmzuDvo0AU" [devices$]="devices$" (selected)="selected($event)"></google-map>
+
+
+	<ion-grid id="grid" class="{{cssAnimation}}" #grid>
+		<ion-row>
+			<ion-col>
+				<b>{{ 'PLANT_DISTRIBUTION.DEVICE_NAME' | translate }}</b>
+			</ion-col>
+			<ion-col>
+				{{selectedDevice?.name}}
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<b>{{ 'PLANT_DISTRIBUTION.DEVICE_FULLNAME' | translate }}</b>
+			</ion-col>
+			<ion-col>
+				{{selectedDevice?.deviceId}}
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<b>{{ 'PLANT_DISTRIBUTION.DEVICE_ADDRESS' | translate }}</b>
+			</ion-col>
+			<ion-col>
+				{{selectedDevice?.address}}
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

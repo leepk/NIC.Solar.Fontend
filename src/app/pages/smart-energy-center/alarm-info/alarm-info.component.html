@@ -1,0 +1,100 @@
+<div class="sticky-segment" scrollable style="background-color: #fff">
+	<ion-segment scrollable [value]="currentTab" mode="ios" (ionChange)="changeTabs($event)">
+		<ion-segment-button value="active-alarm">
+			<ion-label>{{ 'ALARM_INFO_COMP.ACTIVE_ALARM' | translate }}</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="history-alarm">
+			<ion-label>{{ 'ALARM_INFO_COMP.HISTORY_ALARM' | translate }}</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+</div>
+<ion-content class="tab-1"
+			 *ngIf="currentTab == 'active-alarm'"
+			 scrollEvents="true">
+	
+</ion-content>
+<ion-content class="tab-2"
+			 *ngIf="currentTab == 'history-alarm'"
+			 scrollEvents="true">
+	<!--<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content pullingIcon="chevron-down-circle-outline"
+							   pullingText="Pull down to refresh"
+							   refreshingSpinner="circles"
+							   refreshingText="Updating...">
+		</ion-refresher-content>
+	</ion-refresher>-->
+	<ion-list>
+		<ion-item>
+			<ion-label>
+				<div class="title-warp ">
+					<div class="dot">
+						&nbsp;
+					</div>
+					<div class="title">
+						Grid Los(Major)
+					</div>
+				</div>
+				<p>{{ 'ALARM_INFO_COMP.OCCURRENCE_TIME' | translate }}: 02/07/2020 05:39:54</p>
+				<p>{{ 'ALARM_INFO_COMP.CONFIRMATION_STATUS' | translate }}: Recovered</p>
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label>
+				<div class="title-warp ">
+					<div class="dot">
+						&nbsp;
+					</div>
+					<div class="title">
+						Grid Los(Major)
+					</div>
+				</div>
+				<p>{{ 'ALARM_INFO_COMP.OCCURRENCE_TIME' | translate }}: 02/07/2020 05:39:54</p>
+				<p>{{ 'ALARM_INFO_COMP.CONFIRMATION_STATUS' | translate }}: Recovered</p>
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label>
+				<div class="title-warp ">
+					<div class="dot">
+						&nbsp;
+					</div>
+					<div class="title">
+						Grid Los(Major)
+					</div>
+				</div>
+				<p>{{ 'ALARM_INFO_COMP.OCCURRENCE_TIME' | translate }}: 02/07/2020 05:39:54</p>
+				<p>{{ 'ALARM_INFO_COMP.CONFIRMATION_STATUS' | translate }}: Recovered</p>
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label>
+				<div class="title-warp ">
+					<div class="dot">
+						&nbsp;
+					</div>
+					<div class="title">
+						Grid Los(Major)
+					</div>
+				</div>
+				<p>{{ 'ALARM_INFO_COMP.OCCURRENCE_TIME' | translate }}: 02/07/2020 05:39:54</p>
+				<p>{{ 'ALARM_INFO_COMP.CONFIRMATION_STATUS' | translate }}: Recovered</p>
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label>
+				<div class="title-warp ">
+					<div class="dot">
+						&nbsp;
+					</div>
+					<div class="title">
+						Grid Los(Major)
+					</div>
+				</div>
+				<p>{{ 'ALARM_INFO_COMP.OCCURRENCE_TIME' | translate }}: 02/07/2020 05:39:54</p>
+				<p>{{ 'ALARM_INFO_COMP.CONFIRMATION_STATUS' | translate }}: Recovered</p>
+			</ion-label>
+		</ion-item>
+
+
+	</ion-list>
+</ion-content>

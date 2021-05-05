@@ -1,0 +1,82 @@
+﻿<ion-header>
+  <ion-toolbar class="safe-top">
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content class="login-bg ion-justify-content-between">
+	<div class="scroll-content">
+		<img class="bg-img" src="/assets/login.png"/>
+		<div class="upper-content">
+			<!-- <ion-list>
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>{{ 'LOGIN.USERNAME' | translate }}</mat-label>
+						<mat-icon matPrefix>account_circle</mat-icon>
+					<input [(ngModel)]="loginParam.acountname" matInput placeholder="{{ 'LOGIN.USERNAME_PLACEHOLDER' | translate }}" type="text">
+						<mat-icon matSuffix>keyboard_arrow_right</mat-icon>
+					</mat-form-field>
+				</ion-item>
+			</ion-list> -->
+	<!--<select #langSelect (change)="translate.use(langSelect.value)">
+		<option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+	</select>-->
+			<ion-grid class="login-panel">
+				<ion-row>
+					<ion-col size="3">
+						<div class="lang" (click)="changeLang()">{{ 'LOGIN.LANG' | translate }} &#9660;</div>
+					</ion-col>
+					<ion-col class="mid-col" size="6">
+						<img class="logo" src="./assets/icon/logo.png"/>
+						<!--<h3 class="title-name">Solar</h3>-->
+					</ion-col>
+					<!--<ion-col size="3" class="more">
+						<mat-icon>more_horiz</mat-icon>
+					</ion-col>-->
+				</ion-row>
+
+				<ion-row>
+					<div class="login-input" padding>
+						<mat-form-field class="full-width">
+							<mat-label>{{ 'LOGIN.USERNAME' | translate }}</mat-label>
+							<mat-icon matPrefix>account_circle</mat-icon>
+							<input [(ngModel)]="loginParam.acountname" matInput placeholder="{{ 'LOGIN.USERNAME_PLACEHOLDER' | translate }}" type="text">
+						</mat-form-field>
+						<mat-form-field class="full-width">
+							<mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
+							<mat-icon  matPrefix>lock</mat-icon>
+							<input [(ngModel)]="loginParam.password" matInput placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}" [type]="hide ? 'password' : 'text'">
+							<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+							<!--<ion-icon name="eye-off"></ion-icon>-->
+						</mat-form-field>
+					</div>
+				</ion-row>
+				<ion-row class="opt-login">
+					<!--<div class="opt-login full-width">
+						<div class="left-col">
+						</div>
+						<div class="right-col">
+					
+						</div>
+					</div>-->
+					<ion-col size="12">				
+						<div style="float: left;"><ion-checkbox [(ngModel)]="isAutoLogin" (ionChange)="changeAutoLogin()"></ion-checkbox> <ion-router-link style="margin-left:3px;">{{ 'LOGIN.AUTOLOGIN' | translate }}</ion-router-link></div>
+						<!--<div style="float: right;">
+							<ion-router-link (click)="signUp()"> {{ 'LOGIN.REGISTER' | translate }}</ion-router-link>
+						</div>-->
+				
+					</ion-col>
+					<!--<ion-col class="rs-pw" (click)="rsPass()" size="5">
+						{{ 'LOGIN.FORGOTPASSWORD' | translate }}
+					</ion-col>-->
+				</ion-row>
+				<ion-row class="btn-login-row">
+					<ion-button shape="round" class="btn-login" size="default" type="submit" (click)="login()" expand="block">{{ 'LOGIN.LOGIN_BTN' | translate }}</ion-button>			
+				</ion-row>
+
+				<!-- <div class="link-reg" (click)="signUp()">
+					{{ 'LOGIN.REGISTER' | translate }}
+				</div> -->
+			</ion-grid>
+		</div>
+	</div>
+</ion-content>

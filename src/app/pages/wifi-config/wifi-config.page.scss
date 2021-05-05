@@ -1,0 +1,57 @@
+::ng-deep .mat-form-field-prefix {
+    align-self: flex-end;
+}
+
+::ng-deep .mat-form-field-suffix {
+    align-self: flex-end;
+}
+.login-bg {
+    --ion-background-color: #efefef;
+    --background: url('/assets/login.png') 0 0/100% 100% no-repeat;
+    background-size: cover; 
+}
+.scroll-content {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+    display: flex; // added by me
+    flex-direction: column; // added by me
+    justify-content: space-between;
+}
+.term-policy {
+    width: 100%;
+    /*font-size: 30vmin;*/
+
+    div {
+        display: inline-block;
+    }
+}
+
+ion-item {
+    /*margin: 10px 0px;*/
+}
+
+ion-button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+
+.term-2 {
+    color: red;
+}
+b {
+    color: red;
+    margin-left: 3px;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #fff;
+}

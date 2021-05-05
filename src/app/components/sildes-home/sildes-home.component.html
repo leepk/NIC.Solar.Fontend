@@ -1,0 +1,126 @@
+<ion-slides pager="true" [options]="slideOpts" class="slide">
+	<!--<ion-slide class="slide-1">
+		<div>
+			{{ 'SLIDE_COMP.DAILY_ENEGRY' | translate }}
+		</div>
+		<div class="main-number"><b>0.00</b>kWh</div>
+		<div class="sub-info">
+			<div>
+				<div>
+					{{ 'SLIDE_COMP.CURRENT_POWER' | translate }}
+				</div>
+				<div>
+					<b>0.000</b>kW
+				</div>
+			</div>
+			<div>
+				<div>
+					{{ 'SLIDE_COMP.DAILY_REVENUE' | translate }}
+				</div>
+				<div>
+					$<b>0.0</b>
+				</div>
+			</div>
+			<div>
+				<div>
+					{{ 'SLIDE_COMP.TOTAL_ENERGY' | translate }}
+				</div>
+				<div>
+					<b>456.123</b>kWh
+				</div>
+			</div>
+		</div>
+	</ion-slide>-->
+	<ion-slide class="slide-2">
+		<canvas class="chartjsLegend" #doughnutCanvas></canvas>
+		<div class="absolute-center text-center" >			
+			<div class="text-in-chart">
+				{{ 'SLIDE_COMP.TOTAL_NUMBER' | translate }}
+			</div>
+			<div class="text-in-chart">{{totalOn + totalOff}}</div>
+			<!-- <div class="text-in-chart">
+				{{ 'SLIDE_COMP.OF_PLANT' | translate }}
+			</div>  -->
+		</div>		
+		<div class="legend">
+			<div class="chart-name">
+				{{ 'SLIDE_COMP.PLANT_STATUS' | translate }}
+			</div>
+			<div class="legend-name">
+				<div class="dot-1">&nbsp;</div>
+				<div>
+					{{ 'SLIDE_COMP.NORMAL' | translate }}
+					{{totalOn}}
+				</div>
+			</div>
+			<!--<div class="legend-name">
+				<div class="dot-2">&nbsp;</div>
+				<div>
+					{{ 'SLIDE_COMP.FAULTY' | translate }}
+					1
+				</div>
+			</div>-->
+			<div class="legend-name">
+				<div class="dot-3">&nbsp;</div>
+				<div>
+					{{ 'SLIDE_COMP.OFFLINE' | translate }}
+					{{totalOff}}
+				</div>
+			</div>
+		</div>
+	</ion-slide>
+	<!--<ion-slide class="slide-3">
+		<div class="bar-chart">
+			<div class="bar-legend">
+				<ion-label>
+					{{ 'SLIDE_COMP.REALTIME_ALARM' | translate }}
+				</ion-label>
+				<ion-label>
+					{{ 'SLIDE_COMP.TOTAL' | translate }}
+					: 1
+				</ion-label>
+			</div>
+			<div>
+				<div class="bar-legend">
+					<div>
+						{{ 'SLIDE_COMP.CRITICAL' | translate }}
+						: 0
+					</div>
+					<div>0.0%</div>
+				</div>
+				<ion-progress-bar value="0.5"></ion-progress-bar>
+			</div>
+			<div>
+				<div class="bar-legend">
+					<div>
+						{{ 'SLIDE_COMP.MARJOR' | translate }}
+						: 1
+					</div>
+					<div>0.0%</div>
+				</div>
+				<ion-progress-bar value="0.5"></ion-progress-bar>
+			</div>
+			<div>
+				<div class="bar-legend">
+					<div>
+						{{ 'SLIDE_COMP.MINOR' | translate }}
+						: 1
+					</div>
+					<div>0.0%</div>
+				</div>
+				<ion-progress-bar value="0.5"></ion-progress-bar>
+			</div>
+			<div>
+				<div class="bar-legend">
+					<div>
+						{{ 'SLIDE_COMP.SUGGESTION' | translate }}
+						: 1
+					</div>
+					<div>0.0%</div>
+				</div>
+				<ion-progress-bar value="0.5"></ion-progress-bar>
+			</div>
+		</div>
+
+	</ion-slide>-->
+</ion-slides>

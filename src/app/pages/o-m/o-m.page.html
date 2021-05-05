@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>O&M</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="sticky-segment" scrollable style="background-color: #fff">
+		<ion-segment scrollable [value]="currentTab" mode="md" (ionChange)="changeTabs($event)">
+			<ion-segment-button value="plant-status">
+				<ion-label>Plant Status</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="device-alarm">
+				<ion-label>Device Alarm</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="mobile">
+				<ion-label>Mobile Q&M</ion-label>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+
+	<app-plant-status *ngIf="currentTab == 'plant-status'"></app-plant-status>
+	<app-device-alarm *ngIf="currentTab == 'device-alarm'"></app-device-alarm>
+</ion-content>

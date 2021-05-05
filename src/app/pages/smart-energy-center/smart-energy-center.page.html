@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{ 'SMART_ENERGY_CENTER.TITLE' | translate }}</ion-title>
+		<ion-buttons slot="end" (click)="setting()">
+			<ion-icon color="primary" slot="icon-only" name="setting"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="sticky-segment" scrollable style="background-color: #fff">
+		<ion-segment scrollable [value]="currentTab" mode="md" (ionChange)="changeTabs($event)">
+			<ion-segment-button value="real-time-info">
+				<ion-label>{{ 'SMART_ENERGY_CENTER.REALTIME_INFO' | translate }}</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="device-info">
+				<ion-label>{{ 'SMART_ENERGY_CENTER.DEVICE_INFO' | translate }}</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="alarm-info">
+				<ion-label>{{ 'SMART_ENERGY_CENTER.ALARM_INFO' | translate }}</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="historical-info">
+				<ion-label>{{ 'SMART_ENERGY_CENTER.HISTORICAL_INFO' | translate }}</ion-label>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+	<app-real-time-info *ngIf="currentTab == 'real-time-info'"></app-real-time-info>
+	<app-device-info *ngIf="currentTab == 'device-info'"></app-device-info>
+	<app-alarm-info *ngIf="currentTab == 'alarm-info'"></app-alarm-info>
+	<app-historical-info *ngIf="currentTab == 'historical-info'"></app-historical-info>
+</ion-content>

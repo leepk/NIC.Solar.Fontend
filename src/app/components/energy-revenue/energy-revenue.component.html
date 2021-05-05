@@ -1,0 +1,50 @@
+<ion-card>
+	<ion-item lines="full" class="warp-title" no-padding>
+		<div class="tag">&nbsp;</div>
+		<ion-label class="title">
+			{{ 'ENERGY_REVENUE_COMP.TITLE' | translate }}
+		</ion-label>
+		<!--<ion-button fill="outline" slot="end">View</ion-button>-->
+	</ion-item>
+
+	<ion-card-content no-padding>
+		<div class="segment">
+			<ion-segment (ionChange)="changeDateTab($event)" mode="ios" [value]="typeFilterDate">
+				<ion-segment-button value="day">
+					<ion-label>
+						{{ 'ENERGY_REVENUE_COMP.DAY' | translate }}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="month">
+					<ion-label>
+						{{ 'ENERGY_REVENUE_COMP.MONTH' | translate }}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="year">
+					<ion-label>
+						{{ 'ENERGY_REVENUE_COMP.YEAR' | translate }}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="life-time">
+					<ion-label>
+						{{ 'ENERGY_REVENUE_COMP.LIFETIME' | translate }}
+					</ion-label>
+				</ion-segment-button>
+			</ion-segment>
+		</div>
+
+		<div class="date-picker">
+			<ion-icon *ngIf="typeFilterDate != 'day1'" name="play-back" (click)="prevDate()"></ion-icon>
+			<div>
+				<ion-label *ngIf="typeFilterDate == 'day1'">{{currentDate}}</ion-label>
+				<ion-datetime [displayFormat]="displayFormat"
+							  (ionChange)="changeDate($event)"
+							  [(ngModel)]="selectedDate"
+							  *ngIf="typeFilterDate != 'day1'"
+							  ngDefaultControl></ion-datetime>
+			</div>
+			<ion-icon *ngIf="typeFilterDate != 'day1'" name="play-forward" (click)="nextDate()"></ion-icon>
+		</div>
+		<app-home-bar-chart [dataChart]="dataChart" [chartType]="chartType"></app-home-bar-chart>
+	</ion-card-content>
+</ion-card>

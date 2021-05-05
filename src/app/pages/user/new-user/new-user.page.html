@@ -1,0 +1,118 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{ 'NEWUSER.TITLE' | translate }}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-justify-content-between">
+	<div class="scroll-content">
+		<!-- new parent div -->
+		<div class="upper-content">
+			<ion-list>
+				<!--<ion-item lines="none">
+		<mat-form-field class="full-width">
+			<mat-label>Company<b>*</b></mat-label>
+			<mat-icon matPrefix>business_outline</mat-icon>
+			<input matInput placeholder="Company" readonly type="text">
+			<mat-icon matSuffix>keyboard_arrow_right</mat-icon>
+		</mat-form-field>
+	</ion-item>-->
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>{{ 'NEWUSER.FULLNAME' | translate }}<b>*</b></mat-label>
+						<mat-icon matPrefix>assignment_ind</mat-icon>
+						<input [(ngModel)]="accountParam.fullName" matInput placeholder="{{ 'NEWUSER.FULLNAME_PLACEHOLDER' | translate }}" type="text">
+						<!--<mat-icon matSuffix>keyboard_arrow_right</mat-icon>-->
+					</mat-form-field>
+				</ion-item>
+				<ion-item lines="none">
+					<!--<mat-form-field class="full-width">
+			<mat-icon matPrefix>group</mat-icon>
+			<input matInput placeholder="Role" type="text">
+			<mat-icon matSuffix>arrow_drop_down</mat-icon>
+		</mat-form-field>-->
+					<mat-form-field appearance="fill" class="full-width">
+						<mat-label>{{ 'NEWUSER.ROLE' | translate }}<b>*</b></mat-label>
+						<mat-select [(ngModel)]="accountParam.admin">
+							<mat-option value="1">
+								{{ 'NEWUSER.ROLE_OPT_ADMIN' | translate }}
+							</mat-option>
+							<mat-option value="0">
+								{{ 'NEWUSER.ROLE_OPT_USER' | translate }}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+				</ion-item>
+				<!--<ion-item lines="none">
+		<mat-form-field class="full-width">
+			<mat-label>Plant<b>*</b></mat-label>
+
+			<mat-icon matPrefix>grid_on</mat-icon>
+			<input matInput placeholder="Plant" type="text">
+		</mat-form-field>
+	</ion-item>-->
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>
+							{{ 'NEWUSER.USERNAME' | translate }}
+							<b>*</b>
+						</mat-label>
+						<mat-icon matPrefix>account_circle</mat-icon>
+						<input [(ngModel)]="accountParam.acountname" matInput 
+							   placeholder="{{ 'NEWUSER.USERNAME_PLACEHOLDER' | translate }}" type="text">
+					</mat-form-field>
+				</ion-item>
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>{{ 'NEWUSER.PASSWORD' | translate }}<b>*</b></mat-label>
+						<mat-icon matPrefix>lock_outline</mat-icon>
+						<input [(ngModel)]="accountParam.password" matInput 
+							   placeholder="{{ 'NEWUSER.PASSWORD_PLACEHOLDER' | translate }}" [type]="hide ? 'password' : 'text'">
+						<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+					</mat-form-field>
+				</ion-item>
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>{{ 'NEWUSER.PHONE' | translate }}</mat-label>
+						<mat-icon matPrefix>phone</mat-icon>
+						<input [(ngModel)]="accountParam.phone" matInput 
+							   placeholder="{{ 'NEWUSER.PHONE_PLACEHOLDER' | translate }}" type="number">
+					</mat-form-field>
+				</ion-item>
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>{{ 'NEWUSER.EMAIL' | translate }}<b>*</b></mat-label>
+						<mat-icon matPrefix>mail_outline</mat-icon>
+						<input [(ngModel)]="accountParam.email" matInput 
+							   placeholder="{{ 'NEWUSER.EMAIL_PLACEHOLDER' | translate }}" type="text">
+					</mat-form-field>
+				</ion-item>
+				<ion-item lines="none">
+					<mat-form-field class="full-width">
+						<mat-label>{{ 'NEWUSER.ADDRESS' | translate }}</mat-label>
+						<mat-icon matPrefix>place</mat-icon>
+						<input [(ngModel)]="accountParam.address" matInput 
+							   placeholder="{{ 'NEWUSER.ADDRESS_PLACEHOLDER' | translate }}" type="text">
+					</mat-form-field>
+				</ion-item>
+				<!--<ion-item lines="none">
+		<ion-checkbox></ion-checkbox>
+		<div class="term-policy">
+			Residential user's authorization obtained
+			<div class="term-2">
+				If the content you entered involves third-party personal infomation, obtain authorization in advance.
+			</div>
+		</div>
+
+	</ion-item>-->
+			</ion-list>
+		</div>
+		<div class="lower-content">
+			<ion-button (click)="create()">{{ 'NEWUSER.CONFIRM_BTN' | translate }}</ion-button>
+		</div>
+	</div>
+	
+</ion-content>

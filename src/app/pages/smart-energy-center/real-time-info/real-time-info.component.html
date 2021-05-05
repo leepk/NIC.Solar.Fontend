@@ -1,0 +1,117 @@
+<div class="real-time-info">
+	<mat-expansion-panel class="full-width">
+		<mat-expansion-panel-header>
+			<!--<mat-panel-title>
+				Self aware panel
+			</mat-panel-title>-->
+			<mat-panel-description>
+				{{ 'REALTIME_INFO_COMP.NET_WORKING_DIAGRAM' | translate }}
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<div class="net-diagram-wraper">
+			<app-energy-flow></app-energy-flow>
+		</div>
+	</mat-expansion-panel>
+
+	<mat-expansion-panel class="full-width">
+		<mat-expansion-panel-header>
+			<!--<mat-panel-title>
+				Self aware panel
+			</mat-panel-title>-->
+			<mat-panel-description>
+				{{ 'REALTIME_INFO_COMP.REALTIME_DATA' | translate }}
+
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+		<div class="realtime-data-wraper">
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.INVERTER_STATUS' | translate }}:
+				</div>
+				<div class="value">
+					Standby (Empty-illumination)
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.DAILY_ENEGRY' | translate }}:
+				</div>
+				<div class="value">
+					22.98kWh
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.LIFETIME_ENEGRY' | translate }}:
+				</div>
+				<div class="value">
+					389.48 kWh
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.OUTPUT_REACTIVE_POWER' | translate }}:
+				</div>
+				<div class="value">
+					0 Var
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.TOTAL_INPUT_POWER' | translate }}:
+				</div>
+				<div class="value">
+					0 W
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.INVERTER_RATED_POWER' | translate }}:
+				</div>
+				<div class="value">
+					5.000 kW
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.POWER_FACTOR' | translate }}:
+				</div>
+				<div class="value">
+					0.000
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.GRID_FREQUENCY' | translate }}:
+				</div>
+				<div class="value">
+					0.00 Hz
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.DEVICE_INTERNAL_TEMP' | translate }}:
+				</div>
+				<div class="value">
+					43.3&#8451;
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.INVERTER_STARTUP_TIME' | translate }}:
+				</div>
+				<div class="value">
+					23/06/2020 05:35:18
+				</div>
+			</div>
+			<div class="row-text">
+				<div>
+					{{ 'REALTIME_INFO_COMP.INVERTER_SHUTDOWN_TIME' | translate }}:
+				</div>
+				<div class="value">
+					23/06/2020 18:17:13
+				</div>
+			</div>
+		</div>
+	</mat-expansion-panel>
+</div>

@@ -1,0 +1,115 @@
+﻿<ion-header #header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-button color="secondary" (click)="newUser()" *ngIf="auth.isAdminRole()">
+				<ion-icon slot="icon-only" name="person-add"></ion-icon>
+			</ion-button>
+			<!--<ion-button color="secondary" (click)="addDevice()">
+				<ion-icon slot="icon-only" name="add-outline"></ion-icon>
+			</ion-button>-->
+		</ion-buttons>
+		<ion-buttons slot="end">
+			<!--<ion-button color="secondary" (click)="search()">
+				<ion-icon slot="icon-only" name="search"></ion-icon>
+			</ion-button>-->
+			<ion-button color="secondary" (click)="plantDistribution()">
+				<ion-icon slot="icon-only" name="location-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-label #component>
+	<div class="upper-component" style="background-color: #fff">
+		<app-sildes-home></app-sildes-home>
+		<div class="tool">
+			<ion-buttons slot="end">
+				<!--<ion-button color="secondary" size="small" (click)="search()">
+					<ion-icon slot="icon-only" name="search"></ion-icon>
+				</ion-button>-->
+				<ion-button color="secondary" size="small" (click)="plantDistribution()">
+					<ion-icon slot="icon-only" name="location-outline"></ion-icon>
+				</ion-button>
+			</ion-buttons>
+		</div>
+		<div class="add-menu" *ngIf="auth.isAdminRole()">
+			<div class="add-user add" (click)="newUser()">
+				<div class="add-icon">
+					<ion-icon name="person-add"></ion-icon>
+				</div>
+				<ion-label>{{ 'DASHBOARD.NEW_USER' | translate }}</ion-label>
+				<div class="more-icon">
+					<ion-icon name="chevron-forward-outline"></ion-icon>
+				</div>
+			</div>
+			<!--<div class="add-device add" (click)="addDevice()">
+				<div class="add-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+				<ion-label>Add device</ion-label>
+				<div class="more-icon">
+					<ion-icon name="chevron-forward-outline"></ion-icon>
+				</div>
+			</div>-->
+		</div>
+	</div>
+</ion-label>
+
+<!--<ion-label>
+	<div style="background-color: #fff">
+		<ion-segment scrollable value="tab1" mode="md" (ionChange)="changeTabs($event)">
+			<ion-segment-button value="tab1">
+				<ion-label>{{ 'DASHBOARD.PLANT' | translate }}</ion-label>
+			</ion-segment-button>
+			<ion-segment-button value="tab2">
+				<ion-label>{{ 'DASHBOARD.STATISTICS' | translate }}</ion-label>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+</ion-label>-->
+<ion-content no-bounce has-bouncing="false" forceOverscroll="false" class="tab-1"
+			 *ngIf="currentTab == 'tab1'"
+			 scrollEvents="true"
+			 #main1
+			 appHideHeader [header]="header" [main]="main1" [component]="component" [isFirstLoad]="isFirstLoad">
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content pullingIcon="chevron-down-circle-outline"
+							   pullingText="{{ 'DASHBOARD.PULL_TEXT' | translate }}"
+							   refreshingSpinner="circles"
+							   refreshingText="{{ 'DASHBOARD.REFRESHING_TEXT' | translate }}">
+		</ion-refresher-content>
+	</ion-refresher>
+	<ion-list no-bounce has-bouncing="false" forceOverscroll="false" class="list-plant">
+		<app-plant *ngFor="let device of devices" [device]="device"></app-plant>
+
+	</ion-list>
+</ion-content>
+
+<!--<ion-content  *ngIf="currentTab == 'tab2'"
+			 class="content-tab2"
+			 scrollEvents="true"
+			 #main2
+			 appHideHeader [header]="header" [main]="main2" [component]="component" [isFirstLoad]="isFirstLoad">
+	<app-energy-revenue></app-energy-revenue>
+
+	<ion-card>
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div class="tag">&nbsp;</div>
+			<ion-label class="title">{{ 'DASHBOARD.CURRENT_RANKING' | translate }}</ion-label>
+		</ion-item>
+
+		<ion-card-content no-padding>
+			<div class="ranking">
+				<ion-icon name="medal-outline"></ion-icon>
+				<div class="progess">
+					<div>
+						<div>GP-BacSiLam</div>
+						<div class="value">1.12h</div>
+					</div>
+					<ion-progress-bar value="0.5"></ion-progress-bar>
+				</div>
+			</div>
+		</ion-card-content>
+	</ion-card>
+
+	<app-enviromental-contribution></app-enviromental-contribution>
+</ion-content>-->

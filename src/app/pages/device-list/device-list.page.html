@@ -1,0 +1,139 @@
+<ion-menu side="end" type="overlay" contentId="main" class="side-menu">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>
+				{{ 'DEVICE_LIST.TITLE' | translate }}
+			</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	<ion-content padding>
+		<div>
+			{{ 'DEVICE_LIST.DEVICE_TYPE' | translate }}
+		</div>
+		<div class="filter-opts">
+			<div class="filter-opt {{selectedFilter == 'all'? 'selected' : ''}}"
+				 (click)="selectFilter('all')">
+				{{ 'DEVICE_LIST.ALL' | translate }}
+			</div>
+			<div class="filter-opt {{selectedFilter == 'smart'? 'selected' : ''}}"
+				 (click)="selectFilter('smart')">
+				{{ 'DEVICE_LIST.SMART_ENERGY_CENTER' | translate }}
+			</div>
+		</div>
+		<div class="buttons-confirm">
+			<ion-button color="medium">
+				{{ 'DEVICE_LIST.RESET_BTN' | translate }}
+
+			</ion-button>
+			<ion-button>
+				{{ 'DEVICE_LIST.CONFIRM' | translate }}
+			</ion-button>
+		</div>
+	</ion-content>
+</ion-menu>
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-icon color="primary" slot="icon-only" (click)="addDevice()" *ngIf="auth.isAdminRole() && (deviceId == null || deviceId == undefined)" name="add"></ion-icon>
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ 'DEVICE_LIST.DEVICE' | translate }}
+		</ion-title>
+		<!--<ion-buttons slot="end" (click)="openSideMenu()">
+			<ion-icon color="primary" slot="icon-only" name="funnel-outline"></ion-icon>
+		</ion-buttons>-->
+	</ion-toolbar>
+</ion-header>
+<ion-content id="main">
+	<div class="sticky-segment">
+		<ion-searchbar debounce="500" (ionChange)="search($event)" placeholder="{{ 'DEVICE_LIST.SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+		<div class="total">
+			<div class="line-left">
+				&nbsp;
+			</div>
+			<div class="number">
+				{{ 'DEVICE_LIST.CURRENT_DEVICES' | translate:prams }}
+			</div>
+			<div class="line-right">
+				&nbsp;
+			</div>
+		</div>
+	</div>
+
+	<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content pullingIcon="chevron-down-circle-outline"
+							   pullingText="{{ 'DASHBOARD.PULL_TEXT' | translate }}"
+							   refreshingSpinner="circles"
+							   refreshingText="{{ 'DASHBOARD.REFRESHING_TEXT' | translate }}">
+		</ion-refresher-content>
+	</ion-refresher>
+	<!--<ion-card (click)="smartCenter()">
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div slot="start">
+				<ion-icon name="flash" color="primary"></ion-icon>
+			</div>
+			<ion-label class="title">{{ 'DEVICE_LIST.ENERGY_REVENUE_STATISTICS' | translate }}</ion-label>
+
+			<div class="end-text" slot="end">Connected</div>
+		</ion-item>
+
+		<ion-card-content no-padding>
+			<div class="warp-content" no-padding>
+				<div>
+					<ion-label class="full-width">{{ 'DEVICE_LIST.DEVICE_NAME' | translate }}: 210107448310K8000266</ion-label>
+					<ion-label class="full-width">{{ 'DEVICE_LIST.DEVICE_TYPE' | translate }}: Smart Energy Center</ion-label>
+					<ion-label class="full-width">SN: 210107448310K8000266</ion-label>
+				</div>
+				<ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+			</div>
+		</ion-card-content>
+	</ion-card>-->
+
+	<ion-card *ngFor="let device of _filterDevices">
+		<ion-item lines="full" class="warp-title" no-padding>
+			<div slot="start">
+				<ion-icon name="flash" color="primary"></ion-icon>
+			</div>
+			<ion-label class="title">
+				<!--{{ 'DEVICE_LIST.ENERGY_REVENUE_STATISTICS' | translate }}-->
+				{{device.name}} ({{device.deviceId}})
+			</ion-label>
+
+			<div slot="end">
+				<ion-icon name="create-outline" color="primary" (click)="editDevice(device)" 
+				*ngIf="auth.isAdminRole() && (deviceId == null || deviceId == undefined)"></ion-icon>
+			</div>
+		</ion-item>
+		<ion-card-content no-padding>
+			<div class="warp-content" no-padding>
+				<div>
+					<ion-label class="full-width">
+						<!--{{ 'DEVICE_LIST.DEVICE_NAME' | translate }}:-->
+						{{ 'PLANT_COMP.FULLNAME' | translate }}
+						: {{device.deviceId}}
+					</ion-label>
+					<!--<ion-label class="full-width">{{ 'DEVICE_LIST.DEVICE_TYPE' | translate }}: Smart Energy Center</ion-label>-->
+					<ion-label class="full-width">{{ 'DEVICE_LIST.CAPACITY' | translate }}: {{device.capacity}}kW</ion-label>
+					<!--<ion-label class="full-width">{{ 'DEVICE_LIST.CURRENT_POWER' | translate }}: 0.000kW</ion-label>
+					<ion-label class="full-width">{{ 'DEVICE_LIST.DAILY_ENERGY' | translate }}: 14.54kWh</ion-label>
+					<ion-label class="full-width">{{ 'DEVICE_LIST.CONVERSION_EFFICIENCY' | translate }}: 0.00%</ion-label>
+					<ion-label class="full-width">{{ 'DEVICE_LIST.LIFETIME_ENERGY' | translate }}: 507.04kWh</ion-label>
+					<ion-label class="full-width">{{ 'DEVICE_LIST.SOFTWARE_VERSION' | translate }}: V100R001C00SPC334</ion-label>-->
+					<ion-label class="full-width">SN: {{device.serialNumber}}</ion-label>
+
+					<ion-label class="full-width">
+						{{ 'PLANT_COMP.MANUFACTURER' | translate }}
+						: {{device.manufacturer}}
+					</ion-label>
+
+					<ion-label class="full-width">
+						{{ 'PLANT_COMP.MANUFACTUREDATE' | translate }}
+						: {{device.manufactureDate | amDateFormat:'DD/MM/YYYY'}}
+					</ion-label>
+				</div>
+				<!--<ion-icon (click)="smartCenter()" name="chevron-forward-outline" slot="end"></ion-icon>-->
+			</div>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

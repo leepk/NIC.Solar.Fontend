@@ -1,0 +1,19 @@
+::ng-deep .mat-form-field-prefix {
+    align-self: flex-end;
+}
+
+::ng-deep .mat-form-field-suffix {
+    align-self: flex-end;
+}
+.term-policy {
+    width: 100%;
+    div {
+        display: inline-block;
+    }
+}
+
+ion-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 20px;
+}

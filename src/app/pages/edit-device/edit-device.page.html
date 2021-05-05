@@ -1,0 +1,145 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ title }}
+		</ion-title>
+	</ion-toolbar>
+  </ion-header>
+  
+  <ion-content style="background-color:transparent">
+	  <ion-list>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.DEVICE_ID' | translate }}<b>*</b></mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.deviceId" matInput placeholder="{{ 'ADD_DEVICE.DEVICE_PLACEHOLDER' | translate }}" type="text" value="params.deviceId" readonly>
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.SN' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.serialNumber" matInput placeholder="{{ 'ADD_DEVICE.SN_PLACEHOLDER' | translate }}" type="text">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.DEVICE_NAME' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.deviceName" matInput placeholder="{{ 'ADD_DEVICE.DEVICE_NAME_PLACEHOLDER' | translate }}" type="text">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.MANUFACTURER' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.manufacturer" matInput placeholder="{{ 'ADD_DEVICE.MANUFACTURER_PLACEHOLDER' | translate }}" type="text">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.MANUFACTURER_DATE' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input (click)="pickManuDate()" value="{{params.manufactureDate | amDateFormat: 'DD/MM/YYYY'}}" matInput placeholder="{{ 'ADD_DEVICE.MANUFACTURER_DATE_PLACEHOLDER' | translate }}" type="text" readonly>
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-label>{{ 'ADD_DEVICE.INVERTER_TYPE' | translate }}</mat-label>
+				<!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				<input [(ngModel)]="params.inverterType" matInput placeholder="{{ 'ADD_DEVICE.INVERTER_TYPE' | translate }}" type="text">
+			</mat-form-field>
+		</ion-item>
+		<ion-item lines="none">
+			<mat-form-field class="full-width">
+				<mat-label>{{ 'ADD_DEVICE.INVERTER_CAPACITY' | translate }}</mat-label>
+				<!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				<input [(ngModel)]="params.inverterCapacity" matInput placeholder="{{ 'ADD_DEVICE.INVERTER_CAPACITY' | translate }}" type="number">
+			</mat-form-field>
+		</ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.SALE_DATE' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input (click)="pickSaleDate()" value="{{params.saleDate | amDateFormat: 'DD/MM/YYYY'}}" matInput placeholder="{{ 'ADD_DEVICE.SALE_DATE_PLACEHOLDER' | translate }}" type="text" readonly>
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.ADDRESS' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.address" matInput placeholder="{{ 'ADD_DEVICE.ADDRESS_PLACEHOLDER' | translate }}" type="text">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.PANT_TYPE' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.pantType" matInput placeholder="{{ 'ADD_DEVICE.PANT_TYPE' | translate }}" type="text">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.PANT_NUMBER' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.pantNumber" matInput placeholder="{{ 'ADD_DEVICE.PANT_NUMBER' | translate }}" type="number">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.PANT_CAPACITY' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.pantCapacity" matInput placeholder="{{ 'ADD_DEVICE.PANT_CAPACITY' | translate }}" type="number">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.BATTERY_TYPE' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.batteryType" matInput placeholder="{{ 'ADD_DEVICE.BATTERY_TYPE' | translate }}" type="text">
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.BATTERY_CAPACITY' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.batteryCapacity" matInput placeholder="{{ 'ADD_DEVICE.BATTERY_CAPACITY' | translate }}" type="number">
+			  </mat-form-field>
+		  </ion-item>
+		  
+		  <ion-item lines="none">
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.LATITUDE' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.latitude" matInput placeholder="{{ 'ADD_DEVICE.LATITUDE_PLACEHOLDER' | translate }}" type="number">
+  
+			  </mat-form-field>
+			  <mat-form-field class="full-width">
+				  <mat-label>{{ 'ADD_DEVICE.LONGITUDE' | translate }}</mat-label>
+				  <!--<mat-icon matPrefix>lock_outline</mat-icon>-->
+				  <input [(ngModel)]="params.longitude" matInput placeholder="{{ 'ADD_DEVICE.LONGITUDE_PLACEHOLDER' | translate }}" type="number">
+  
+			  </mat-form-field>
+		  </ion-item>
+		  <ion-item>
+			<mat-select [(ngModel)]="params.active">
+				<mat-option value="1">
+					{{ 'ADD_DEVICE.ACTIVE' | translate }}
+				</mat-option>
+				<mat-option value="0">
+					{{ 'ADD_DEVICE.INACTIVE' | translate }}
+				</mat-option>
+			</mat-select>
+		  </ion-item>
+	  </ion-list>
+	  <ion-datetime #datepickerManu style="display:none" [displayFormat]="displayFormat" [(ngModel)]="params.manufactureDate"></ion-datetime>
+	  <ion-datetime #datepickerSale style="display:none" [displayFormat]="displayFormat" [(ngModel)]="params.saleDate"></ion-datetime>
+  
+	  <ion-button class="confirm full-width" (click)="confirm()">
+		  {{ 'ADD_DEVICE.COMFIRM_BTN' | translate }}
+	  </ion-button>	  
+  </ion-content>
+  

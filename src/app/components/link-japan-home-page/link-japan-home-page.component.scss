@@ -1,0 +1,14 @@
+.bottomlink {
+    display: flex;
+    justify-content: normal;
+    height: 40px; width: 100%;
+    .image-link {
+        height: 40px; width: 120px;
+    }
+    .text-absolute-center {
+        position: relative;
+        top: 50%;
+        font-size: 12px !important;
+        //transform: translate(-50%, -50%);
+    }
+}

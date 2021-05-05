@@ -1,0 +1,156 @@
+ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    // here other custom CSS from documentation
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    color: #403b3b;
+    margin: 10px 0px;
+
+    ion-label {
+        /*font-size: 3vmin;*/
+        font-size: small;
+    }
+
+    mat-icon {
+        /*font-size: 5vmin;
+        height: 5vmin;
+        width: 5vmin;*/
+    }
+}
+h2 {
+    /*font-size: 4vmin;*/
+}
+.label-1 {
+    font-weight: 500;
+}
+
+ion-avatar {
+    width: 20%;
+    height: fit-content;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label-2 {
+        margin: 10px 0px;
+        /*font-size: 3vmin;*/
+        font-size: small;
+    }
+
+    .label-3 {
+        /*font-size: 3vmin;*/
+        font-size: small;
+    }
+
+    .more-icon {
+        display: flex;
+
+        ion-icon {
+            /*font-size: 5vmin;*/
+            color: #a09595;
+        }
+    }
+}
+
+
+
+.status {
+    display: flex;
+    justify-content: flex-end;
+    /*font-size: 3vmin;*/
+    .warp-status {
+        /*border-radius: 0px 2vmin 0px 2vmin;*/
+        border-radius: 0px 10px 0px 10px;
+        background-color: #008000;
+        padding: 3px;
+        color: #fff;
+        /*font-size: 2.5vmin;*/
+        font-size: small;
+    }
+
+    .warp-status-off {
+        /*border-radius: 0px 2vmin 0px 2vmin;*/
+        border-radius: 0px 10px 0px 10px;
+        background-color: grey;
+        padding: 3px;
+        color: #fff;
+        /*font-size: 2.5vmin;*/
+        font-size: small;
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    //CSS
+    ion-avatar {
+        width: 15%;
+    }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    //CSS
+
+}

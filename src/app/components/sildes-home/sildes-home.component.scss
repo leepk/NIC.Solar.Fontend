@@ -1,0 +1,279 @@
+.slide {
+    background-color: #F5982D;
+    height: 150px;
+}
+
+ion-slides {
+    //height: 30%;
+    /*background-color: red;*/
+    color: white//var(--ion-color-primary);//#fff;
+}
+
+.slide-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+
+    div {
+        font-size: large;
+    }
+
+    .main-number {
+        font-size: xx-large;
+    }
+
+    .sub-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.slide-2 {
+    display: flex;
+    justify-content: normal;
+    /*.chartjsLegend li span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        border-radius: 25px;
+    }*/
+    .chartjsLegend {
+        width: 70% !important;
+    }
+
+    .legend {
+        /*font-size: 4vmin;*/
+        font-size:x-small;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .absolute-center {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-center {
+        text-align: center;
+        //background: url('/assets/icon/logo.png') 0 0/100% 100% no-repeat;
+    }
+
+    .legend-name {
+        display: flex;
+        align-items: center;
+
+        .dot-1 {
+            border: transparent;
+            background:  #4fe04c;
+            width: 3vmin;
+            height: 3vmin;
+            border-radius: 3vmin;
+            margin: 5px;
+        }
+
+        .dot-2 {
+            border: transparent;
+            background: #fd1717;
+            width: 3vmin;
+            height: 3vmin;
+            border-radius: 3vmin;
+            margin: 5px;
+        }
+
+        .dot-3 {
+            border: transparent;
+            background: #8e8d85;
+            width: 3vmin;
+            height: 3vmin;
+            border-radius: 3vmin;
+            margin: 5px;
+        }
+    }
+
+    .text-in-chart {
+        /*font-size: 3vmin;*/
+        font-size: small;
+        //background-image: ;
+        
+    }
+    /*@media only screen and (device-width : 375px) and (-webkit-device-pixel-ratio : 3) {
+        .text-in-chart {
+            font-size: small;
+        }
+    }
+
+    @media only screen and (device-width : 375px) and (-webkit-device-pixel-ratio : 2) {
+        .text-in-chart {
+            font-size: small;
+        }
+    }
+
+    @media only screen and (device-width : 414px) and (-webkit-device-pixel-ratio : 3) {
+        .text-in-chart {
+            font-size: small;
+        }
+    }
+
+    @media only screen and (device-width : 768px) {
+        .text-in-chart {
+            font-size: x-large;
+        }
+    }
+
+    @media only screen and (device-width : 320px) {
+        .text-in-chart {
+            font-size: x-small;
+        }
+    }*/
+}
+
+.slide-3 {
+    width: 75% !important;
+    display: flex;
+    align-items: flex-start;
+
+    ion-progress-bar {
+        height: 10px;
+        border-radius: 10px;
+        --progress-background: #fff;
+    }
+
+    @media only screen and (device-width : 320px) {
+        ion-progress-bar {
+            height: 7px;
+            border-radius: 7px;
+            /*--progress-background: #fff;*/
+        }
+    }
+
+    .bar-chart {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        height: 85%;
+
+        .bar-legend {
+            width: 100%;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            font-size: small;
+        }
+    }
+    /*progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: #33cd5f;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background-color: #3299E6;
+        border-radius: 2px;
+    }*/
+}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slide-1 {
+
+        div {
+            /*font-size: 4vmin;*/
+        }
+
+        .main-number {
+            /*font-size: 5vmin;*/
+        }
+    }
+    .slide-3 {
+        .bar-chart {
+            .bar-legend {
+                justify-content: space-between;
+                /*font-size: 3vmin;*/
+            }
+        }
+    }
+    .slide-2 {
+        .chartjsLegend {
+            width: 62% !important;
+        }
+
+        .absolute-center {
+            left: 31%
+        }
+    }
+    .slide {
+        height: 200px;
+       padding: 15px;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    //CSS
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    //CSS
+
+}

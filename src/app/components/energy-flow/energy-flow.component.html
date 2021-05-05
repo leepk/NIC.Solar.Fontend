@@ -1,0 +1,82 @@
+<div class="energy-flow-row1">
+	<div class="pv">
+		<img src="./assets/icon/pv.png" />
+		<div>
+			{{ 'ENERGY_FLOW_COMP.PV' | translate }}
+		</div>
+	</div>
+	<div class="energy-arrow flow-1" *ngIf="flow?.PantToInverter">
+		<div class="number-e">
+			{{flow?.PantToInverter}}kW
+		</div>
+		<app-energy-flow-arrow></app-energy-flow-arrow>
+	</div>
+	<div class="energy-arrow flow-1" *ngIf="!flow?.PantToInverter">
+		<div class="number-e-red" style="height: 18px;">		
+		</div>
+		<app-energy-flow-stop></app-energy-flow-stop>
+	</div>
+	<div class="inverter">
+		<img src="./assets/icon/inverter.png" />
+		<div>
+			{{ 'ENERGY_FLOW_COMP.INVERTER' | translate }}
+			<!--(2)-->
+		</div>
+	</div>
+	<div class="energy-arrow flow-2-2"  *ngIf="flow?.InverterToGrid">
+		<div class="number-e">
+			{{flow?.InverterToGrid}}kW
+		</div>
+		<app-energy-flow-arrow></app-energy-flow-arrow>
+	</div>
+	<div class="energy-arrow flow-2" *ngIf="flow?.GridToInverter">
+		<app-energy-flow-arrow color="danger"></app-energy-flow-arrow>
+		<div class="number-e-red">
+			{{flow?.GridToInverter}}kW
+		</div>
+	</div>
+	<div class="grid" *ngIf="flow?.GridToInverter || flow?.InverterToGrid">
+		<img src="./assets/icon/grid.png" />
+		<div>
+			{{ 'ENERGY_FLOW_COMP.GRID' | translate }}
+		</div>
+	</div>
+	<div class="energy-arrow flow-3" *ngIf="flow?.PantInverterToHome">
+		<app-energy-flow-arrow></app-energy-flow-arrow>
+		<div class="number-e">
+			{{flow?.PantInverterToHome}}kW
+		</div>
+	</div>
+	<div class="energy-arrow flow-4" *ngIf="flow?.GridInverterToHome">
+		<div class="number-e-red">
+			{{flow?.GridInverterToHome}}kW
+		</div>
+		<app-energy-flow-arrow color="danger"></app-energy-flow-arrow>
+	</div>
+	<div class="load" *ngIf="flow?.PantInverterToHome || flow?.GridInverterToHome">
+		<img src="./assets/icon/load.png" />
+		<div>
+			{{ 'ENERGY_FLOW_COMP.HOME' | translate }}
+
+		</div>
+	</div>
+
+	<div class="energy-arrow flow-5" *ngIf="flow?.InverterToBattery">
+		<app-energy-flow-arrow></app-energy-flow-arrow>
+		<div class="number-e">
+			{{flow?.InverterToBattery}}kW
+		</div>
+	</div>
+	<div class="energy-arrow flow-6" *ngIf="flow?.BatteryToInverter">
+		<app-energy-flow-arrow color="danger"></app-energy-flow-arrow>
+		<div class="number-e-red">
+			{{flow?.BatteryToInverter}}kW
+		</div>
+	</div>
+	<div class="battery" *ngIf="flow?.BatteryToInverter || flow?.InverterToBattery">
+		<img src="./assets/icon/battery.png" />
+		<div>
+			{{ 'ENERGY_FLOW_COMP.BATTERY' | translate }} 
+		</div>
+	</div>
+</div>

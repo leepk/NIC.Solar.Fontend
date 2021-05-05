@@ -1,0 +1,132 @@
+.add-menu {
+    display: flex;
+    padding: 10px;
+
+    .add-device {
+        .add-icon {
+            background-color: #a565ea;
+        }
+    }
+
+    .add-user {
+        .add-icon {
+            background-color: #4cd7e0;
+        }
+    }
+
+    .add {
+        width: fit-content;
+        height: 10%;
+        display: flex;
+        align-items: center;
+
+        .add-icon {
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 5px;
+
+            ion-icon {
+                font-size: 30px;
+                color: #fff;
+            }
+        }
+
+        .more-icon {
+            display: flex;
+
+            ion-icon {
+                font-size: 30px;
+                color: #a09595;
+            }
+        }
+    }
+}
+.upper-component {
+    position: relative;
+    margin-top: var(--ion-safe-area-top, 0);
+    .tool {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        z-index: 9;
+        /*height: 6vmin;*/
+        ion-button {
+            height: fit-content;
+        }
+        ion-icon {
+            /*font-size: 6vmin;*/
+        }
+    }
+}
+
+::ng-deep .mat-tab-label-content {
+    color: #008000;
+}
+
+::ng-deep .mat-ink-bar {
+    background-color: #008000 !important;
+}
+ion-content {
+
+    .scroll {
+        height: 40%;
+    }
+}
+.tab-1 {
+    .list-plant {
+        padding-bottom: 80px;
+    }
+}
+.content-tab2 {
+    ion-item {
+        //--inner-padding-end: 0px;
+        --padding-start: 0px
+    }
+
+    ion-card-content {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+
+    .title {
+        font-weight: 500;
+    }
+}
+
+
+.tag {
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: linear-gradient(90deg, rgba(17,189,31,1) 0%, rgba(148,222,118,1) 82%);
+}
+
+.ranking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .progess {
+        width: 90%;
+        margin-left: 10px;
+
+        .value {
+            color: var(--ion-color-primary)
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ion-progress-bar {
+            height: 5px;
+            border-radius: 5px;
+            --progress-background: #16CC15;
+        }
+    }
+}
+
+::ng-deep .safe-top {
+    height: 0px;
+}

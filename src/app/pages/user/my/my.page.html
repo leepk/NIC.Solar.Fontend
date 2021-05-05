@@ -1,0 +1,35 @@
+<ion-header >
+		<ion-toolbar class="safe-top">
+		</ion-toolbar>
+</ion-header> 
+
+<ion-content>
+	<div class="upper">
+		<div class="avatar">
+			<img src="./assets/icon/empty-avatar.png"/>
+		</div>
+		<div class="user-name">
+			{{username}}
+		</div>
+	</div>
+	<div class="lower">
+		<div class="item">
+			<div (click)="changePw()">
+				<ion-icon color="primary" class="maticon_50" name="shield-outline"></ion-icon>
+				<!--<mat-icon class="maticon_50"  matPrefix>login</mat-icon>-->
+			</div>
+			<div class="title">
+				{{ 'MY.PASSWORDCHANGE' | translate }}
+			</div>
+		</div>
+		<div class="item">
+			<div (click)="logout()">
+				<ion-icon color="primary" class="maticon_50" name="log-out-outline"></ion-icon>
+				<!--<mat-icon class="maticon_50"  matPrefix>login</mat-icon>-->
+			</div>
+			<div class="title">
+				{{ 'MY.LOGOUT' | translate }}
+			</div>
+		</div>
+	</div>
+</ion-content>

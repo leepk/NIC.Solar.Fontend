@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-searchbar placeholder="Search Favorites"></ion-searchbar>
+		<ion-buttons slot="primary">
+			<ion-button color="primary" (click)="search()">
+				<ion-icon slot="icon-only" name="business-outline"></ion-icon>
+			</ion-button>
+			<ion-button color="primary">
+				<ion-icon slot="icon-only" name="funnel-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<app-plant></app-plant>
+		<app-plant></app-plant>
+	</ion-list>
+</ion-content>

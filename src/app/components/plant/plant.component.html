@@ -1,0 +1,48 @@
+﻿<ion-item (click)="detail()">
+	<!--<ion-avatar slot="start">
+		<img src="assets/icon/favicon.png">
+	</ion-avatar>-->
+	<ion-label>
+		<div>
+			<div class="status">
+				<div *ngIf="device.active == '1'" class="warp-status">
+					{{'SLIDE_COMP.NORMAL' | translate}}
+				</div>
+				<div *ngIf="device.active == '0'" class="warp-status-off">
+					{{'SLIDE_COMP.OFFLINE' | translate}}
+				</div>
+			</div>
+			<h2 class="label-1">
+				{{device?.name}}
+			</h2>
+		</div>
+		<div class="detail">
+			<div>
+				<div class="label-2">
+					{{ 'PLANT_COMP.FULLNAME' | translate }}
+					: {{device?.deviceId}}
+				</div>
+				<div class="address">
+					<mat-icon matPrefix>place</mat-icon>
+					<ion-label class="ion-text-wrap">{{device?.address}}</ion-label>
+				</div>
+				<!--<div class="label-2">Installed Capacity: 10.000kWp</div>
+	<div class="label-3">Daily energy: 0.114kWh</div>-->
+				<!--<div class="label-2">
+		{{ 'PLANT_COMP.MANUFACTURER' | translate }}
+		: {{device?.manufacturer}}
+	</div>
+	<div class="label-2">
+		{{ 'PLANT_COMP.MANUFACTUREDATE' | translate }}
+		: {{device?.manufactureDate | amDateFormat:'DD/MM/YYYY'}}
+	</div>-->
+				<div class="label-2">{{ 'PLANT_COMP.CAPACITY' | translate }}: {{device?.capacity}}</div>
+				<div class="label-3">{{ 'PLANT_COMP.BATTERY_CAPACITY' | translate }}: {{device?.batteryCapacity}}</div>
+			</div>
+
+			<div class="more-icon" (click)="detail()">
+				<ion-icon name="chevron-forward-outline"></ion-icon>
+			</div>
+		</div>
+	</ion-label>
+</ion-item>

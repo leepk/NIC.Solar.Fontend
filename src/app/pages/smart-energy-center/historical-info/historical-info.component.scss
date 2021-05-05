@@ -1,0 +1,40 @@
+.chart__container,
+.cursor {
+    margin: 0 auto;
+}
+
+.cursor,
+.tooltip {
+    position: absolute;
+    /*top: 1px;*/
+    pointer-events: none;
+    /*z-index: 99;*/
+}
+
+
+.warpLineChart {
+    position: relative;
+}
+
+.filter-group {
+    display: flex;
+    justify-content: space-evenly;
+
+    .cb-1 {
+        width: 25%;
+    }
+
+    .cb-2 {
+        width: 45%;
+    }
+
+    .date-time {
+        align-self: center;
+
+        ion-datetime {
+            border: var(--ion-color-primary) 1px solid;
+            border-radius: 10px;
+            padding: 4px;
+        }
+    }
+}

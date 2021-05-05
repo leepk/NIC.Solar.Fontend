@@ -1,0 +1,72 @@
+.upper {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
+    background: url('/assets/mysetting.png') 0 0/100% 100% no-repeat;
+
+    .avatar {
+        width: 25%;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .user-name {
+        color: #fff;
+    }
+}
+
+.lower {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 75%;
+
+    .item {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 25%;
+        margin-top: 15px;
+
+        .icon {
+            /*font-size: 10vmin;*/
+            font-size: 30px;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .logout {
+            background: linear-gradient(297deg, rgba(238,243,244,1) 0%, rgba(245,7,7,1) 50%);
+        }
+
+        .change-pw {
+            background: linear-gradient(297deg, rgba(241,244,238,1) 0%, rgba(7,245,126,1) 50%);
+        }
+
+        .title {
+            text-align: center;
+        }
+    }
+}
+
+.maticon_50{
+    font-size: 50px; 
+    height: 50px; 
+    width: 50px;
+}
+
+::ng-deep .safe-top {
+    height: 0px;
+}

@@ -1,0 +1,281 @@
+{
+	"TABS":{
+		"HOME":"Home",
+		"DEVICE":"Thiết bị",
+		"MY":"Tài khoản",
+		"WIFI":"Cài đặt WIFI"
+	},
+	"ADD_DEVICE": {
+		"COMFIRM_BTN": "Xác nhận",
+		"TITLE": "Thêm thiết bị",
+		"DEVICE_ID": "ID Thiết bị",
+		"DEVICE_PLACEHOLDER": "Vui lòng nhập ID thiết bị",
+		"SN": "Số sê-ri",
+		"SN_PLACEHOLDER": "Vui lòng nhập số sê-ri",
+		"DEVICE_NAME": "Tên thiết bị",
+		"DEVICE_NAME_PLACEHOLDER": "Vui lòng nhập tên thiết bị",
+		"MANUFACTURER": "Nhà sản xuất",
+		"MANUFACTURER_PLACEHOLDER": "Vui lòng nhập nhà sản xuất",
+		"MANUFACTURER_DATE": "Ngày sản xuất",
+		"MANUFACTURER_DATE_PLACEHOLDER": "Vui lòng nhập ngày sản xuất",
+		"SALE_DATE": "Ngày bán",
+		"SALE_DATE_PLACEHOLDER": "Vui lòng nhập ngày bán",
+		"ADDRESS": "Địa chỉ",
+		"ADDRESS_PLACEHOLDER": "Vui lòng nhập địa chỉ",
+		"LATITUDE": "Vĩ độ",
+		"LONGITUDE": "Kinh độ",
+		"PANT_TYPE": "Thông tin tấm pin",
+		"PANT_NUMBER": "Số lượng tấm pin",
+		"PANT_CAPACITY": "Công suất tấm pin",
+		"BATTERY_TYPE": "Thông tin pin",
+		"BATTERY_CAPACITY": "Công suất pin",
+		"LATITUDE_PLACEHOLDER": "Vd: 14.058324",
+		"LONGITUDE_PLACEHOLDER": "Vd: 108.277199",
+		"EDIT_TITLE":"Cập nhật ",
+		"ACTIVE":"Sử dụng",
+		"INACTIVE":"Ngưng sử dụng",
+		"INVERTER_TYPE":"Loại Inverter",
+		"INVERTER_CAPACITY":"Công suất Inverter"
+	},
+	"CHANGEPASSWORD": {
+		"CONFIRMPASSWORD": "Xác nhận mật khẩu",
+		"CONFIRMPASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu xác nhận",
+		"CONFIRM_BTN": "Xác nhận",
+		"NEWPASSWORD": "Mật khẩu mới",
+		"NEWPASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu mới",
+		"OLDPASSWORD": "Mật khẩu cũ",
+		"OLDPASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu cũ",
+		"TITLE": "Thay đổi mật khẩu",
+		"ERROR_CHECK_PASSWORD": "Mật khẩu và xác nhận mật khẩu không giống nhau!"
+
+	},
+	"DASHBOARD": {
+		"CURRENT_RANKING": "Xếp hạng nhà máy hiện tại",
+		"NEW_USER": "Thêm người dùng mới",
+		"PLANT": "Cây",
+		"PULL_TEXT": "Kéo xuống để làm mới",
+		"REFRESHING_TEXT": "Đang cập nhật ...",
+		"STATISTICS": "Số liệu thống kê"
+	},
+	"DETAILS_PLANT": {
+		"ANNUAL_ENERGY": "Sản lượng hằng năm",
+		"DAILY_ENERGY": "Sản lượng hằng ngày",
+		"LIFETIME_ENERGY": "Sản lượng trọn đời",
+		"MONTHLY_ENERGY": "Sản lượng hằng tháng",
+		"PLANT_LAYOUT_TAB": "Bố trí nhà máy",
+		"REALTIME_INFO_TAB": "Thông tin thời gian thực",
+		"DAILY_INCOMING": "Thu nhập hằng ngày",
+		"MONTHLY_INCOMING": "Thu nhập hằng tháng",
+		"ANNUAL_INCOMING": "Thu nhập hằng năm",
+		"LIFETIME_INCOMING": "Thu nhập thiết bị",
+		"SAVING": "Tiết kiệm",
+		"DEVICE_INFO": "Thông tin thiết bị",
+		"PANT_TYPE": "Thông tin tấm pin",
+		"PANT_NUMBER": "Số lượng tấm pin",
+		"PANT_CAPACITY": "Công suất tấm pin",
+		"BATTERY_TYPE": "Thông tin pin",
+		"BATTERY_CAPACITY": "Công suất pin",
+		"WEATHER": "Thời tiết",
+		"WIND": "Gió",
+		"TOMORROW": "Ngày mai",
+		"AFTER_TOMORROW": "Ngày kia"
+	},
+	"DEVICE_LIST": {
+		"ALL": "Tất cả các",
+		"CAPACITY": "Sức chứa",
+		"CONFIRM": "Xác nhận",
+		"CONVERSION_EFFICIENCY": "Hiệu suất chuyển đổi",
+		"CURRENT_DEVICES": "Hiện tại có {{value}} thiết bị",
+		"CURRENT_POWER": "Công suất hiện tại",
+		"DAILY_ENERGY": "Sản lượng hằng ngày",
+		"DEVICE": "Thiết bị",
+		"DEVICE_NAME": "Tên thiết bị",
+		"DEVICE_TYPE": "Loại thiết bị",
+		"ENERGY_REVENUE_STATISTICS": "Thống kê sản lượng và doanh thu",
+		"LIFETIME_ENERGY": "Sản lượng trọn đời",
+		"RESET_BTN": "Cài lại",
+		"SEARCH_PLACEHOLDER": "Tìm kiếm thiết bị",
+		"SMART_ENERGY_CENTER": "Trung tâm năng lượng thông minh",
+		"SOFTWARE_VERSION": "Phiên bản phần mềm",
+		"TITLE": "Lọc thiết bị"
+	},
+	"ENERGY_FLOW_COMP": {
+		"BATTERY": "Ác quy",
+		"GRID": "Lưới",
+		"HOME": "Nhà",
+		"INVERTER": "Biến tần",
+		"PV": "Pv",
+		"TITLE": "Dòng năng lượng"
+	},
+	"ENERGY_MANAGEMENT_COMP": {
+		"DAY": "Ngày",
+		"LIFETIME": "Cả đời",
+		"MONTH": "Tháng",
+		"PRODUCTION": "Sản xuất",
+		"TITLE": "Thống kê sản lượng sản xuất",
+		"YEAR": "Năm"
+	},
+	"ENERGY_REVENUE_COMP": {
+		"DAY": "Ngày",
+		"ENERGY": "Sản xuất",
+		"INCOME": "Tiêu thụ",
+		"LIFETIME": "Cả đời",
+		"MONTH": "tháng",
+		"PRODUCTION": "Sản xuất",
+		"TITLE": "Thống kê sản lượng sản xuất và tiêu thụ",
+		"YEAR": "Năm"
+	},
+	"ENVIRONMENTAL_CONTRIBUTION": {
+		"COAL": "Tiết kiệm than tiêu chuẩn",
+		"TITLE": "Đóng góp môi trường",
+		"TREE": "Trồng cây tương đương",
+		"TREES": "cây"
+	},
+	"LOGIN": {
+		"LANG": "Tiếng Việt",
+		"AUTOLOGIN": " Ghi nhớ",
+		"FORGOTPASSWORD": "Quên mật khẩu?",
+		"LOGIN_BTN": "Đăng nhập",
+		"PASSWORD": "Mật khẩu",
+		"PASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu",
+		"REGISTER": "Chưa có tài khoản?",
+		"TITLE": "Đăng nhập",
+		"USERNAME": "Tên truy cập",
+		"USERNAME_PLACEHOLDER": "Tên truy cập, số điện thoại hoặc email"
+	},
+	"MY": {
+		"LOGOUT": "Đăng xuất",
+		"PASSWORDCHANGE": "Thay đổi mật khẩu"
+	},
+	"NAME": "English",
+	"NEWUSER": {
+		"ADDRESS": "Địa chỉ",
+		"ADDRESS_PLACEHOLDER": "Vui lòng nhập địa chỉ",
+		"CONFIRM_BTN": "Xác nhận",
+		"EMAIL": "Email",
+		"EMAIL_PLACEHOLDER": "Vui lòng nhập email",
+		"FULLNAME": "Họ và tên",
+		"FULLNAME_PLACEHOLDER": "Họ và tên",
+		"PASSWORD": "Mật khẩu",
+		"PASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu",
+		"PHONE": "Điện thoại",
+		"PHONE_PLACEHOLDER": "Vui lòng nhập số điện thoại",
+		"ROLE": "Vai trò",
+		"ROLE_OPT_ADMIN": "Quản trị viên",
+		"ROLE_OPT_USER": "Người dùng",
+		"TITLE": "Thêm người dùng mới",
+		"USERNAME": "Tên truy cập",
+		"USERNAME_PLACEHOLDER": "Vui lòng nhập tên truy cập"
+	},
+	"PLANT_COMP": {
+		"FULLNAME": "Tên đầy đủ",
+		"MANUFACTUREDATE": "Ngày sản xuất",
+		"MANUFACTURER": "Nhà chế tạo",
+		"CAPACITY": "Dung tích",
+		"BATTERY_CAPACITY": "Dung tích pin"
+	},
+	"RESETPASSWORD": {
+		"CONFIRMPASSWORD": "Xác nhận mật khẩu",
+		"CONFIRMPASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu xác nhận",
+		"CONFIRM_BTN": "Xác nhận",
+		"EMAIL": "Email",
+		"EMAIL_PLACEHOLDER": "Vui lòng nhập email",
+		"NEXT_BTN": "Kế tiếp",
+		"PASSWORD": "Mật khẩu",
+		"PASSWORD_PLACEHOLDER": "Vui lòng nhập mật khẩu",
+		"TITLE": "Đặt lại mật khẩu",
+		"VERTICODE": "Mã xác nhận",
+		"VERTICODE_PLACEHOLDER": "Vui lòng nhập mã xác nhận",
+		"VERTICODE_SEND_BTN": "Gửi mã xác minh"
+	},
+	"SLIDE_COMP": {
+		"CRITICAL": "Giới hạn",
+		"CURRENT_POWER": "Công suất hiện tại",
+		"DAILY_ENEGRY": "Sản lượng hằng ngày",
+		"DAILY_REVENUE": "Thu nhập hằng ngày",
+		"FAULTY": "Bị lỗi",
+		"MARJOR": "Chính",
+		"MINOR": "Phụ",
+		"NORMAL": "Bình thường",
+		"OFFLINE": "Mất kết nối",
+		"OF_PLANT": "của nhà máy điện",
+		"PLANT_STATUS": "Tình trạng",
+		"REALTIME_ALARM": "Báo động thời gian thực",
+		"SUGGESTION": "Gợi ý",
+		"TOTAL": "toàn bộ",
+		"TOTAL_ENERGY": "Tổng sản lượng",
+		"TOTAL_NUMBER": "Tổng số"
+	},
+	"SMART_ENERGY_CENTER": {
+		"TITLE": "Trung tâm năng lượng thông minh",
+		"REALTIME_INFO": "Thông tin thời gian thực",
+		"DEVICE_INFO": "Thông tin thiết bị",
+		"ALARM_INFO": "Thông tin báo động",
+		"HISTORICS_INFO": "Thông tin lịch sử"
+	},
+	"ALARM_INFO_COMP": {
+		"ACTIVE_ALARM": "Kích hoạt báo động",
+		"HISTORY_ALARM": "Lịch sử báo động",
+		"OCCURRENCE_TIME": "Thời gian xuất hiện",
+		"CONFIRMATION_STATUS": "Trạng thái xác nhận"
+	},
+	"DEVICE_INFO_COMP": {
+		"MANUFACTURER_NAME": "Tên nhà sản xuất",
+		"DEVICE_NAME": "Tên thiết bị",
+		"DEVICE_TYPE": "Loại thiết bị",
+		"DEVICE_REP_HIS": "Lịch sử thay thế thiết bị",
+		"DEVICE_ADDRESS": "Địa chỉ thiết bị",
+		"SOFTWARE_VERSION": "Phiên bản phần mềm",
+		"GROUP_INFO": "Thông tin nhóm",
+		"Model": "Kiểu mẫu"
+	},
+	"REALTIME_INFO_COMP": {
+		"NET_WORKING_DIAGRAM": "Sơ đồ mạng",
+		"REALTIME_DATA": "Dữ liệu thời gian thực",
+		"INVERTER_STATUS": "Trạng thái biến tần",
+		"DAILY_ENEGRY": "Sản lượng hằng ngày",
+		"LIFETIME_ENEGRY": "Sản lượng nâng",
+		"OUTPUT_REACTIVE_POWER": "Công suất phản kháng đầu ra",
+		"TOTAL_INPUT_POWER": "Tổng công suất đầu vào",
+		"INVERTER_RATED_POWER": "Công suất định mức của biến tần",
+		"POWER_FACTOR": "Hệ số công suất",
+		"GRID_FREQUENCY": "Tần số lưới",
+		"DEVICE_INTERNAL_TEMP": "Nhiệt độ bên trong thiết bị",
+		"INVERTER_STARTUP_TIME": "Thời gian khởi động biến tần",
+		"INVERTER_SHUTDOWN_TIME": "Thời gian tắt biến tần"
+	},
+	"MAP_USER": {
+		"TITLE": "Map người dùng - thiết bị",
+		"BTN_CONFIRM": "Xác nhận",
+		"BTN_CANCEL": "Hủy",
+		"USER_NAME_PLACEHOLDER": "User name",
+		"SEARCH_PLACEHOLDER": "Tìm kiếm",
+		"WARNING_MSG": "Thêm {{username}} vào {{device}}"
+
+	},
+	"PLANT_DISTRIBUTION": {
+		"TITLE": "Plant Distribution",
+		"DEVICE_NAME": "Tên thiết bị",
+		"DEVICE_FULLNAME": "Tên đầy đủ",
+		"DEVICE_ADDRESS": "Địa chỉ"
+	},
+	"RESPONSE_MSG": {
+		"M00": "Thành công!"
+	},
+	"APP": {
+		"EXIT_MSG": "Nhấn lần nữa để thoát."
+	},
+	"WIFI_SETTINGS":{
+		"SSID":"SSID (Tên Wifi)",
+		"BSSID":"BSSID (MAC wifi)",
+		"PASSWORD":"Mật khẩu",
+		"COMFIRM":"Cài đặt",
+		"STOP":"Dừng",
+		"SSID_REQUIRED":"Vui lòng nhập SSID",
+		"BSSID_REQUIRED":"Vui lòng nhập BSSID",
+		"PASS_REQUIRED":"Vui lòng nhập mật khẩu",
+		"GETSSID":"Lấy SSID",
+		"SUCCESS":"Thành công",
+		"FAIL":"Thất bại"
+	}
+}

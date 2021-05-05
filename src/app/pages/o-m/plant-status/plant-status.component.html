@@ -1,0 +1,33 @@
+﻿<ion-content>
+	<ion-refresher slot="fixed">
+		<ion-refresher-content pullingIcon="chevron-down-circle-outline"
+							   pullingText="Pull down to refresh"
+							   refreshingSpinner="circles"
+							   refreshingText="Updating...">
+		</ion-refresher-content>
+	</ion-refresher>
+	<ion-list>
+		<ion-card (click)="smartCenter()">
+			<ion-item lines="full" class="warp-title" no-padding>
+				<div slot="start" class="end-text">Connected</div>
+
+				<ion-label class="title">GP- BacSiLam</ion-label>
+
+			</ion-item>
+
+			<ion-card-content no-padding>
+				<div class="warp-content" no-padding>
+					<div>
+						<ion-label class="full-width count-device-alarm">Device Alarm(PCS): 0</ion-label>
+						<ion-label class="full-width">Installed Capacity: 20.000kWp</ion-label>
+						<ion-label class="full-width">Equivalent Utilizing Hours: 0.52h</ion-label>
+						<ion-label class="full-width">Current Power: 1.062kW</ion-label>
+						<ion-label class="full-width">Daily energy: 10.39kWh</ion-label>
+						<ion-label class="full-width">Single MW Power: 53.100kW</ion-label>
+					</div>
+					<ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+				</div>
+			</ion-card-content>
+		</ion-card>
+	</ion-list>
+</ion-content>
